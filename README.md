@@ -1,28 +1,42 @@
-# VantaPoint
+# 🔐 VantaPoint — Verified Access. Mission-Critical Trust.
 
-**Secure. Verified. Obscured.**  
-VantaPoint is a zero-trust, high-clearance access platform for military, government, law enforcement, and critical operations teams.
+VantaPoint is an ultra-secure, verified-access platform designed for high-clearance personnel — including military, black ops, government agencies, law enforcement, and approved federal contractors. Every aspect of the platform is engineered for zero-compromise security, offline usability, and mission-specific compartmentalization.
 
-## 🎯 Designed For
-- Military & Federal Agents
-- Black Ops & Intelligence Units
-- High-security task forces
-- Cleared contractors & internal IT
+## 🎯 Core Objectives
 
-## 🛡️ Core Priorities
-- Strict Identity Verification (Tiered clearance)
-- Rotating codenames, remote wipe, voice biometrics
-- Zero-access architecture (no shared backend with Odyssi)
-- Decentralized, compartmentalized support options
-- Vanta Dev Oversight Group (DOG) for internal protection
+- Multi-level tiered access (T1–T4 clearance)
+- Role-based lockdown profiles
+- Compartmented mission modules
+- Death map protection & dynamic access control
+- Full biometric or codeword authentication
 
-## 📌 Current Stage: Pre-Alpha
-Foundational setup for secure comms, internal IT bridges, and tiered access is underway.
+## 👤 User Types
 
-## 🔐 Security Model
-End-to-end encryption | Tamper-detection | Codename obfuscation | Lockdown browsers
+- Military Operatives
+- Federal Agents (FBI, CIA, DHS, etc.)
+- SWAT, HRT, and Law Enforcement
+- Special Investigators
+- Medical, Fire, or Hazmat working alongside ops
+- Cleared Government/Defense Contractors
 
-## 🌐 Website
-[https://vantapoint.tech](https://vantapoint.tech)
+## 🧱 Security Features
 
----
+- Hardware-bound encryption (AES-256, optional FIPS 140-2)
+- Lockdown browser for T1 devs
+- Zero shared backend with Odyssi
+- Biometric verification & rotating access keys
+- Offline mission caching with auto-self-destruct on tamper
+- Obfuscated profiles, internal-only codenames
+
+## 📅 Project Status
+
+- **Stage:** Pre-Alpha
+- **Environment:** Air-gapped & secure build in progress
+- **Backend:** Isolated instance with no open APIs
+- **Legal:** Draft ToU & AUP underway
+
+## 🔒 Access Requirements
+
+VantaPoint is not available to the public. Access must be verified via secure chain of custody.
+
+Contact: [vantapoint@proton.me](mailto:vantapoint@proton.me)
