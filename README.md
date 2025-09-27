@@ -1,42 +1,73 @@
-# 🔐 VantaPoint — Verified Access. Mission-Critical Trust.
+# React + TypeScript + Vite
 
-VantaPoint is an ultra-secure, verified-access platform designed for high-clearance personnel — including military, black ops, government agencies, law enforcement, and approved federal contractors. Every aspect of the platform is engineered for zero-compromise security, offline usability, and mission-specific compartmentalization.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🎯 Core Objectives
+Currently, two official plugins are available:
 
-- Multi-level tiered access (T1–T4 clearance)
-- Role-based lockdown profiles
-- Compartmented mission modules
-- Death map protection & dynamic access control
-- Full biometric or codeword authentication
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 👤 User Types
+## React Compiler
 
-- Military Operatives
-- Federal Agents (FBI, CIA, DHS, etc.)
-- SWAT, HRT, and Law Enforcement
-- Special Investigators
-- Medical, Fire, or Hazmat working alongside ops
-- Cleared Government/Defense Contractors
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🧱 Security Features
+## Expanding the ESLint configuration
 
-- Hardware-bound encryption (AES-256, optional FIPS 140-2)
-- Lockdown browser for T1 devs
-- Zero shared backend with Odyssi
-- Biometric verification & rotating access keys
-- Offline mission caching with auto-self-destruct on tamper
-- Obfuscated profiles, internal-only codenames
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 📅 Project Status
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-- **Stage:** Pre-Alpha
-- **Environment:** Air-gapped & secure build in progress
-- **Backend:** Isolated instance with no open APIs
-- **Legal:** Draft ToU & AUP underway
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-## 🔒 Access Requirements
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-VantaPoint is not available to the public. Access must be verified via secure chain of custody.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-Contact: [vantapoint@proton.me](mailto:vantapoint@proton.me)
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
