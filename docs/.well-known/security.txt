@@ -1,0 +1,6 @@
+Contact: mailto:vantapoint@proton.me
+Policy: https://vantapoint.tech/SECURITY
+Preferred-Languages: en
+Encryption: openpgp4fpr:0000000000000000000000000000000000000000
+Canonical: https://vantapoint.tech/.well-known/security.txt
+Expires: 2026-12-31T23:59:59Z
